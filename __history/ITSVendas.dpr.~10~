@@ -1,0 +1,15 @@
+program ITSVendas;
+
+uses
+  Vcl.Forms,
+  frmPrincipal.View in 'Src\View\frmPrincipal.View.pas' {fmrPrincipal},
+  uLogin.Controller in 'Src\Controller\uLogin.Controller.pas';
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(TfmrPrincipal, fmrPrincipal);
+  Application.Run;
+end.

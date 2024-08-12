@@ -1,0 +1,41 @@
+unit uLogin.Controller;
+
+interface
+
+uses
+  SysUtils;
+type
+TLoginController = class
+  private
+  FEmail: string;
+  FSenha: string;
+  public
+  constructor Create(const Email, Senha: string);
+  function usuarioValido: Boolean;
+  property Email: string read FEmail write FEmail;
+  property Senha: string read FSenha write FSenha;
+end;
+implementation
+
+{ TLoginController }
+
+constructor TLoginController.Create(const Email, Senha: string);
+begin
+  FEmail := email;
+  FSenha := Senha;
+end;
+
+function TLoginController.usuarioValido: Boolean;
+begin
+
+  if (FEmail = '')  Or (FSenha = '') then
+  begin
+    raise Exception.Create('Error Message');
+    Result := false;
+    Exit
+  end;
+
+
+end;
+
+end.

@@ -1,0 +1,14 @@
+program ITSVendas;
+
+uses
+  Vcl.Forms,
+  frmPrincipal.View in 'Src\View\frmPrincipal.View.pas' {fmrPrincipal};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(TfmrPrincipal, fmrPrincipal);
+  Application.Run;
+end.
